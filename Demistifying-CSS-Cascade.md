@@ -7,7 +7,9 @@ Halo, selamat datang di tulisan pertama saya. Saya akan mulai dengan *little bit
 
 ![Max's Tweet](/tweet_max_stoiber.png)
 
-> Yeah, pertanyaan yang simpel namun menarik bukan? Setidaknya bagi saya itu sangat *intriguing*. Dan saya pun termasuk ke dalam 44% orang yang menjawab **salah**. 
+> Yeah, pertanyaan yang simpel namun menarik bukan? Jawaban mana yang akan teman-teman pilih?
 
-Ya, 44% dari 14.517 adalah angka yang cukup besar untuk sebuah kesalahpahaman mengenai sesuatu (*red*: CSS) yang sering dianaktirikan dan dianggap remeh, *HAHA*. Lantas, jawaban mana yang benar? Dalam proses pencaraiannya, saya menemukan suatu hal yang sangat menarik yang seharusnya saya tahu dan paham sedari dulu kala, adalah CSS Cascade.
+Saya pun termasuk ke dalam 44% orang yang menjawab **salah**. Ya, 44% dari 14.517 adalah angka yang cukup besar untuk sebuah kesalahpahaman mengenai sesuatu (*red*: CSS) yang sering dianaktirikan dan dianggap remeh, *HAHA*. Lantas, jawaban mana yang benar? Dalam proses pencariannya, saya menemukan suatu hal yang sangat menarik yang seharusnya saya tahu dan paham sedari dulu kala, adalah CSS Cascade. Mari kita bahas lebih lanjut di tulisan ini.
+
+
 
