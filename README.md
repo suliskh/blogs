@@ -12,23 +12,26 @@ Saya pun termasuk ke dalam 44% orang yang menjawab **salah**. Ya, 44% dari 14.51
 
 > Lantas, jawaban mana yang benar? Mengapa demikian?
 
-Dalam proses pencariannya, saya menemukan suatu hal yang sangat menarik yang harap bisa saya ketahui dan pahami sedari dulu kala, adalah CSS Cascade. MARKIBAH di tulisan ini ~
+Dalam proses pencariannya, saya menemukan suatu hal yang sangat menarik yang saya harap bisa saya ketahui dan pahami sedari dulu kala, adalah *CSS Cascade*. MARKIBAH, mari kita bahas di tulisan ini ~
+
+---
 
 ## The Cascading Nature of CSS
 
-CSS adalah kependekan dari _Cascading Style Sheet_. Ya, kata _cascade_ adalah bagian dari CSS dan merupakan hal fundamental untuk bisa memahami bagaimana CSS bekerja.
+CSS adalah kependekan dari _Cascading Style Sheet_. Ya, kata _cascading_ adalah bagian dari CSS dan merupakan hal fundamental untuk bisa memahami bagaimana CSS bekerja.
 
-Seringkali kita menemukan CSS _rules_ yang kita tulis untuk melakukan _styling_ pada suatu _element_ itu tidak bekerja sebagaimana yang kita inginkan. Hal tersebut bisa terjadi karena ada _rules_ lain yang teraplikasikan ke elemen yang kita tuju, baik dari _styling_ yang kita buat sendiri di bagian lain ataupun _third-party_ CSS yang kita pasang. _Cascading_ (dan konsep _specifity_) adalah mekanisme browser untuk menentukan manakah _rules_ yang akan teraplikasikan pada suatu _element_ apabila terdapat konflik seperti tersebut di atas. Banyak orang menganggap mekanisme ini sebagai _flaws_ dari CSS yang membuatnya sulit dipelajari dan banyak bug, namun menurut saya mekanisme tersebut merupakan fitur fundamental dari CSS yang sangat bermanfaat dan memudahkan pekerjaan apabila kita memahami bagaimana caranya bekerja.
+Seringkali kita menemukan CSS _rules_ yang kita tulis untuk melakukan _styling_ pada suatu _element_ itu tidak bekerja sebagaimana yang kita inginkan. Hal tersebut bisa terjadi karena ada _rules_ lain yang teraplikasikan ke _element_ yang kita tuju, baik dari _styling_ yang kita buat sendiri di bagian lain ataupun _third-party_ CSS yang kita pasang. _Cascading_ (dan konsep _specifity_) adalah mekanisme browser untuk menentukan manakah _rules_ yang akan teraplikasikan pada suatu _element_ apabila terdapat konflik seperti tersebut di atas. Banyak orang menganggap mekanisme ini sebagai _flaws_ dari CSS yang membuatnya sulit dipelajari dan banyak bug, namun menurut saya mekanisme tersebut merupakan fitur fundamental dari CSS yang sangat bermanfaat dan memudahkan pekerjaan apabila kita memahami bagaimana caranya bekerja.
 
-Terdapat 3 faktor yang digunakan dalam mekanisme _cascading_ untuk menentukan _rules_ yang akan teraplikasikan pada suatu `element`. Berikut adalah daftarnya yang terurut naik berdasarkan prioritasnya (item di bawah akan meng-_overrule_ item yang ada di atasnya):
+Terdapat 3 faktor yang digunakan dalam mekanisme _cascading_ untuk menentukan _rules_ yang akan teraplikasikan pada suatu `element`. Berikut adalah daftar berdasarkan prioritasnya (item di bawah akan meng-_overrule_ item yang ada di atasnya):
 
 1. Source Order
 2. Specifity
 3. `!important`
 
+--- 
 ## Source Order
 
-Penentuan `cascading` paling awal ditentukan dari urutan pendeklarasian _rule_-nya. Secara sederhana, jika terdapat lebih dari satu _rules_ yang dituliskan pada elemen yang sama (dengan bobot _specifity_ yang sama), maka yang akan teraplikasi adalah _rule_ yang dideklarasi terakhir.
+Penentuan *cascading* paling awal ditentukan dari urutan pendeklarasian _rules_-nya. Secara sederhana, jika terdapat lebih dari satu _rules_ yang dituliskan pada elemen yang sama (dengan bobot _specifity_ yang sama), maka yang akan teraplikasi adalah _rules_ yang dideklarasi terakhir.
 
 Tinjau CSS berikut
 
@@ -43,11 +46,11 @@ h1 {
 
 Maka `h1` akan memiliki `color: blue`
 
-Selain itu, kita juga perlu ingat bahwa terdapat beberapa _styling_ dari sumber lain yang mempengaruhi _cascading_. Berikut adalah daftarnya dengan terurut naik berdasarkan prioritasnya.
+Selain itu, kita juga perlu ingat bahwa terdapat beberapa _styling_ dari sumber lain yang mempengaruhi _cascading_. Berikut adalah daftar berdasarkan prioritasnya.
 
 1. _User-agent stylesheets_
 
-Merupakan _basic/default styling_ yang diterapkan oleh browser poda beberapa komponen `html`. Beberapa browser menerapkan _styling_ yang berbeda-beda. Oleh karena itu kita sering memanfaatkan _third-party_ seperti [`reset.css`](https://meyerweb.com/eric/tools/css/reset/) atau [normalize.css](https://necolas.github.io/normalize.css/) untuk menyeragamkan _default styling_-nya.
+Merupakan _basic styling_ yang diterapkan secara `default` oleh *browser* pada beberapa *element* `html`. Beberapa *browser* menerapkan _styling_ yang berbeda-beda. Oleh karena itu kita bisa memanfaatkan _third-party_ seperti [`reset.css`](https://meyerweb.com/eric/tools/css/reset/) atau [normalize.css](https://necolas.github.io/normalize.css/) untuk menyeragamkan _default styling_-nya.
 
 2. _Author stylesheets_
 
@@ -55,7 +58,7 @@ Ini adalah tipe _styling_ yang paling umum, berasal dari _styling_ yang ditulis 
 
 Tinjau kode berikut:
 
-`style.css`:
+`CSS`:
 
 ```css
 h1 {
@@ -63,7 +66,7 @@ h1 {
 }
 ```
 
-`index.html`:
+`HTML`:
 
 ```html
 <!DOCTYPE html>
@@ -88,13 +91,15 @@ Maka, `h1` akan memiliki `color: blue`
 
 3. _User stylesheets_
 
-Ini adalah `styling` yang dikustomasi oleh _user_ melalui pengaturan di _browser_ ataupun via _extension_. Jika memiliki bobot _specifity_ yang sama, maka _styling_ dari sumber ini akan selalu meng-_overrule_ yang lainnya.
+Ini adalah *styling* yang dikustomasi oleh _user_ melalui pengaturan di _browser_ ataupun via _extension_. Jika memiliki bobot _specifity_ yang sama, maka _styling_ dari sumber ini akan selalu meng-_overrule_ yang lainnya.
+
+---
 
 ## Specifity
 
 _Specifity_ adalah sebuah bobot yang diberikan pada suatu _CSS declaration_. _Specifity_ yang dihitung dari jumlah dan bobot setiap tipe _selector_._Rules_ yang akan teraplikasi adalah _rules_ dari _CSS declaration_ yang memiliki bobot tertinggi.
 
-[ESTELLE WEYL][estelle weyl](http://www.standardista.com/css3/css-specificity/) dalam tulisannya menjelaskan dengan jelas bagaimana penghitungan bobot _specifity_ bekerja.
+[Estelle Weyl](http://www.standardista.com/css3/css-specificity/) dalam tulisannya menjelaskan dengan jelas bagaimana penghitungan bobot _specifity_ bekerja.
 
 - `X-0-0`: jumlah _id selectors_ (e.g. `#home`)
 - `0-Y-0`: jumlah _class selectors_ (e.g. `.heading`), _attributes selector_ (e.g. `[type="checkbox"]`), dan _pseudo-classes_ (e.g. `:hover`)
@@ -143,6 +148,8 @@ Pada `CSS 1`, `#myDiv { co redlor: red; }` memiliki bobot tertinggi (100 > 10 > 
 
 Pada `CSS 2`, ketiga _declaration_ memiliki bobot yang sama, maka yang diambil adalah yang terakhir _(source order)_, sehingga _element_ akan memiliki `color: orange`
 
+---
+
 ## `!important`
 
 `!important` adalah sebuah sintaks khusus yang bisa digunakan untuk meng-_overrule_ semua peraturan-peraturan di atas.
@@ -167,3 +174,25 @@ h1#heading {
 ```
 
 Walaupun terdapat *declaration* yang memiliki bobot *specifity* lebih besar dan terdapat *inline style*, namun `!important` akan meng-*overrule* *styling* lainnya. Sehingga *element* memiliki `color: red`.
+
+---
+---
+
+Okay, setelah kita bahas tentang *CSS Cascade*, selanjutnya mari kita coba jawab pertanyaan dari *poll tweet* tersebut di atas.
+
+Terdapat dua `CSS declaration` yang memiliki bobot *specifity* sama 
+```css
+.red { color: red } /* 0-1-0 */
+.blue { color: blue } /* 0-1-0 */
+```
+
+Kemudian terdapat 2 buah `div` yang menerapkan *styling* tersebut
+```html
+<div class="red blue">...
+
+<div class="blue red">...
+```
+
+Urutan penulisan di atribut `class="..."` tidak mempengaruhi *cascade*. Dan karena bobot *specifity*-nya sama, maka berdasarkan *source order*, yang akan teraplikasi adalah *rules* yang ditulis terakhir. Jawaban yang benar adalah kedua `div` akan memiliki `color: blue`;
+
+
