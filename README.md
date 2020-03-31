@@ -8,7 +8,7 @@ Halo, selamat datang di tulisan pertama saya. Saya akan mulai dengan _little bit
 
 > Yeah, pertanyaan yang simpel namun menarik bukan? Jawaban mana yang akan teman-teman pilih?
 
-Saya pun termasuk ke dalam 44% orang yang menjawab **salah**. Ya, 44% dari 14.517 adalah angka yang cukup besar untuk sebuah kesalahpahaman mengenai konsep fundamental dari sesuatu (_red_: CSS) yang sering dianaktirikan dan dianggap remeh, _HAHA_.
+Saya pun termasuk ke dalam 44% orang yang menjawab **salah**. Ya, 44% dari 14.517 adalah angka yang cukup besar untuk sebuah kesalahpahaman mengenai konsep fundamental dari sesuatu (_red_: CSS) yang sering dianaktirikan dan dianggap remeh :sweat_smile:.
 
 > Lantas, jawaban mana yang benar? Mengapa demikian?
 
