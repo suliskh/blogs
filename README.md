@@ -193,6 +193,6 @@ Kemudian terdapat 2 buah `div` yang menerapkan *styling* tersebut
 <div class="blue red">...
 ```
 
-Urutan penulisan pada atribut `class="..."` tidak mempengaruhi *cascade*. Dan karena bobot *specifity*-nya sama, maka berdasarkan *source order*, yang akan teraplikasi adalah *rules* yang ditulis terakhir. Jawaban yang benar adalah kedua `div` akan memiliki `color: blue`;
+Urutan penulisan pada atribut `class="..."` tidak mempengaruhi *cascade*. Dan karena bobot *specifity*-nya sama, maka berdasarkan *source order*, yang akan teraplikasi adalah *rules* yang ditulis terakhir. Jawaban yang benar adalah kedua `div` akan memiliki `color: blue`
 
 
